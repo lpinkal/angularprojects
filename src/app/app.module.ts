@@ -12,6 +12,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ErrorpageComponent } from './errorpage/errorpage.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     RegistrationComponent,
     LoginComponent,
     ProfileComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ErrorpageComponent
   ],
   imports: [
     BrowserModule,

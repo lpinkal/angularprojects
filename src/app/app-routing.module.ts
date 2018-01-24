@@ -13,7 +13,8 @@ const appRoute:Routes=[
     ]},
   {path:'login', component:LoginComponent},
   {path:'registration', component:RegistrationComponent},
-  {path:'not-found', component:NotFoundComponent}
+  {path:'not-found', component:NotFoundComponent},
+  {path:'**', redirectTo:'not-found'}
 ];
 
 @NgModule({
