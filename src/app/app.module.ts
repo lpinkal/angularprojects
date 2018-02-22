@@ -13,7 +13,12 @@ import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
-
+import { ObservableComponent } from './observable/observable.component';
+import { ImagecompComponent } from './imagecomp/imagecomp.component';
+import {Angular2TokenService} from "angular2-token";
+import {FileSelectDirective} from "ng2-file-upload";
+import {Ng2ImgMaxModule} from "ng2-img-max";
+import { DisplayimageComponent } from './displayimage/displayimage.component'
 
 @NgModule({
   declarations: [
@@ -23,15 +28,20 @@ import { ErrorpageComponent } from './errorpage/errorpage.component';
     LoginComponent,
     ProfileComponent,
     NotFoundComponent,
-    ErrorpageComponent
+    ErrorpageComponent,
+    ObservableComponent,
+    ImagecompComponent,
+    FileSelectDirective,
+    DisplayimageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    Ng2ImgMaxModule
   ],
-  providers: [ServerService],
+  providers: [ServerService,Angular2TokenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

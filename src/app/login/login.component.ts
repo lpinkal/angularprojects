@@ -15,9 +15,10 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
   onlogin(f:NgForm){
-    this.serverservice.login(f.value).subscribe( (response: any) => {
-        console.log(JSON.parse(response._body).message);
-        let res = JSON.parse(response._body).message;
+    this.serverservice.login(f.value).subscribe( (res: any) => {
+      //console.log(response);
+       // console.log(JSON.parse(response._body).message);
+       // let res = JSON.parse(response._body).message;
         if (res === 'sucess') {
           this.session=f.value.email;
           console.log(this.session);
@@ -31,6 +32,14 @@ export class LoginComponent implements OnInit {
         console.log('err');
         this.router.navigate(['not-found']);
       })
+  }
+
+  googlelogin1(f:NgForm){
+    // alert('google ');
+    console.log('dfvgr');
+    this.serverservice.googlelogin(f.value).subscribe((response:any)=>{
+      console.log(JSON.parse(response._body));
+    })
   }
 
 }

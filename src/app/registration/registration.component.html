@@ -1,4 +1,7 @@
-<h3>Registration form</h3>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+<h4 class="display-2">Registration form</h4>
 <form (ngSubmit)="onsave(f)" #f="ngForm">
   <p *ngIf=error>not valid</p>
   <label>Name:</label>
@@ -17,7 +20,18 @@
       >{{gender}}
     </label>
   </div>
-  <button type="submit" [disabled]="!f.valid">submit</button>
+  <input type="file" name="file" #fileInput ngModel>
+  <button type="submit" [disabled]="!f.valid" class="btn-outline-primary">submit</button>
 </form>
+      <div class="col-2">
+        <a><img class="rounded-circle img-fluid" [src]="myimagepath" height="200" width="200" ></a>
+      </div>
 
+      <div class="alert alert-secondary alert-dismissable fade show">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Secondary!</strong> Indicates a slightly less important action.
+      </div>
 <div role="presentation" routerLinkActive="active" ><a routerLink="/login">Login</a></div>
+  </div>
+  </div>
+</div>
